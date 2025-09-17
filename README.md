@@ -58,6 +58,7 @@ Formatos aceitos:
   {"titulo": "Total de usuários", "sql": "SELECT COUNT(*) AS total FROM usuarios"},
   {"titulo": "Último login", "sql": "SELECT MAX(last_login) FROM usuarios"}
 ]
+```
 
 ## Execução manual
 `POST http://localhost:8080/api/relatorios/gerar` gera e envia imediatamente. Lembre do lapiço de datas pois está configurado para extrair dados quinzenais.
