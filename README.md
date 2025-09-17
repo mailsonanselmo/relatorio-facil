@@ -6,6 +6,16 @@ Aplicação que lê arquivos `.txt` contendo JSON com **titulo** e **sql**, exec
 gera um Excel (colunas *Título* e *Resultado*), salva no diretório configurado e envia por e-mail.
 Agendada para rodar **todo dia 1 e 16 às 06:00 (America/Fortaleza)**.
 
+## Tecnologias Utilizadas
+
+- **Java 17**
+- **Spring Boot 3.5.5**
+- **Maven**
+- **PostgreSQL**
+- **Apache POI** (para geração de arquivos Excel)
+- **Spring Mail** (envio de e-mails)
+- **Docker** (containerização)
+
 ## Entrada (scripts)
 Coloque seus arquivos `.txt` em `./scripts` (ou diretório configurado). Formatos aceitos:
 1. **Array JSON** único por arquivo:
