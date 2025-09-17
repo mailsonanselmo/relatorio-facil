@@ -1,0 +1,10 @@
+[
+  {
+    "titulo": "TITULO COLUNA",
+    "sql": "SQL"
+  },
+   {
+    "titulo": "TITULO COLUNA",
+    "sql": "SQL"
+  }
+]

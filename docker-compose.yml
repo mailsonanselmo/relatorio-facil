@@ -1,0 +1,21 @@
+services:
+  relatorio-facil:
+    build: .
+    container_name: relatorio-facil
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/nome_do_banco
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_MAIL_HOST=smtp.gmail.com
+      - SPRING_MAIL_PORT=587
+      - SPRING_MAIL_USERNAME=email@gmail.com
+      - SPRING_MAIL_PASSWORD=P A S S W O R D
+      - RELATORIO_MAIL_TO=email@gmail.com
+    volumes:
+      # Mapeie o diretório local de scripts
+      - ./scripts:/app/scripts:ro
+      # Salvar Excel no C: (Windows)
+      - "C:/relatorios:/app/output"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

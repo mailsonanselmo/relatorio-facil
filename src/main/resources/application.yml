@@ -1,0 +1,50 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: relatorio-facil
+  jackson:
+    time-zone: America/Fortaleza
+    default-property-inclusion: NON_NULL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nome_do_banco
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email@gmail.com
+    password: P A S S W O R D
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    default-encoding: UTF-8
+
+# Diretórios (no container). Mapeie volumes para a máquina host (ex: C:\relatorios).
+relatorio:
+  scripts-dir: /app/scripts
+  output-dir: /app/output
+  #scripts-dir: C:\relatorios\scripts
+  #output-dir: C:\relatorios\output
+
+  
+  timezone: America/Fortaleza
+  # 06:00 nos dias 1 e 16
+  schedule-cron: "0 0 6 1,16 * *"
+  schedule-zone: America/Fortaleza
+  mail:
+    to: "email@gmail.com"
+    subject: "Relatório SQL - {data}"
+    body: "Segue em anexo o relatório gerado automaticamente. Se esse email chegou no dia 1° ou dia 16° 
+    quer dizer o Scheduler (agendamento) está funcionando. by Mailson"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

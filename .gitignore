@@ -1,0 +1,11 @@
+/target/
+/.idea/
+/.apt_generated/
+/.classpath
+/.project
+/.settings/
+/.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+*.iml
+*.log
+*.DS_Store
