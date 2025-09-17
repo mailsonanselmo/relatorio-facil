@@ -60,10 +60,10 @@ Formatos aceitos:
 ]
 ```
 
-## Execução manual
+## ▶️ Execução manual
 `POST http://localhost:8080/api/relatorios/gerar` gera e envia imediatamente. Lembre do lapiço de datas pois está configurado para extrair dados quinzenais.
 
-## Configuração
+## ⚙️ Configuração
 Edite `src/main/resources/application.yml`:
 - `spring.datasource.*`: conexão PostgreSQL
 - `spring.mail.*`: SMTP para envio
@@ -78,6 +78,6 @@ Edite `src/main/resources/application.yml`:
 ### docker-compose.yml (Windows)
 Mapeie `C:\relatorios` (host) para `/app/output` (container) para salvar no **C:** se for windows.
 
-## Segurança
-- Apenas `SELECT` é permitido.
-- Sem parâmetros dinâmicos; se precisar, use `views` ou `functions` protegidas.
+## 🔒 Segurança
+- ✅ Apenas `SELECT` é permitido.
+- 🚫 Sem parâmetros dinâmicos; se precisar, use `views` ou `functions` protegidas.
