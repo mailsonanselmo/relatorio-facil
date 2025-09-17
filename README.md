@@ -70,7 +70,7 @@ Edite `src/main/resources/application.yml`:
 - `relatorio.scripts-dir`: diretório dos `.txt`
 - `relatorio.output-dir`: onde salvar os Excel
 
-## Docker
+## 🐳 Docker
 ### Dockerfile
 - Multi-stage (build + runtime)
 - Charset UTF-8 por padrão
